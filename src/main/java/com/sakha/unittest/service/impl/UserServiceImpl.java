@@ -27,7 +27,6 @@ public class UserServiceImpl implements UserService {
 
 		userDTO.setId(1);
 		userDTO.setName("bhavana");
-		// TODO Auto-generated method stub
 		return userDTO;
 	}
 
