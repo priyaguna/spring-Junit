@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: unittest
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: raushan
+Implementation-Vendor-Id: com.sakha
+Build-Jdk: 1.8.0_192
+Implementation-URL: http://projects.spring.io/spring-boot/unittest/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
