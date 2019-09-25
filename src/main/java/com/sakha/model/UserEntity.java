@@ -1,4 +1,4 @@
-package com.sakha.unittest.controller;
+package com.sakha.model;
 
 import java.io.Serializable;
 
@@ -12,9 +12,6 @@ import javax.persistence.Table;
 @Table(name="user")
 public class UserEntity implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	@Id

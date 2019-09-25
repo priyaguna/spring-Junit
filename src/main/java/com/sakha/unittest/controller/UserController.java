@@ -28,14 +28,15 @@ public class UserController {
 	@RequestMapping(value = GET_USER, method = RequestMethod.GET)
 	public UserDTO getUser(HttpServletRequest request, HttpServletResponse response,
 			@RequestParam("userId") Integer userId) {
+		UserDTO userDto = null;
 		try {
-			return userService.getUser(userId);
+			userDto =  userService.getUser(userId);
 		} catch (Exception e) {
 			ErrorDTO errorJson = new ErrorDTO();
 			errorJson.setErrorMessage(e.getMessage());
 			//return new ResponseEntity<ErrorDTO>(errorJson, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
-		return null;
+		return userDto;
 	}
 	
 	@ExceptionHandler(Exception.class)

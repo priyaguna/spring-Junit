@@ -1,8 +1,0 @@
-com/sakha/unittest/repository/UserRepository.class
-com/sakha/unittest/dto/ErrorDTO.class
-com/sakha/unittest/service/UserService.class
-com/sakha/unittest/controller/UserController.class
-com/sakha/unittest/controller/UserEntity.class
-com/sakha/unittest/service/impl/UserServiceImpl.class
-com/sakha/unittest/dto/UserDTO.class
-Application.class

@@ -4,5 +4,5 @@ import com.sakha.unittest.dto.UserDTO;
 
 public interface UserService {
 
-	UserDTO getUser(Integer userId);	
+	public UserDTO getUser(Integer userId);	
 }
