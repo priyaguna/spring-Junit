@@ -1,6 +1,4 @@
-package com.sakha.model;
-
-import java.io.Serializable;
+package com.sakha.unittest.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="user")
-public class UserEntity implements Serializable {
+public class UserEntity {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -43,4 +41,12 @@ public class UserEntity implements Serializable {
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
+
+	@Override
+	public String toString() {
+		return "UserEntity [id=" + id + ", name=" + name + ", mobile=" + mobile + "]";
+	}
+	
+	
 }
+

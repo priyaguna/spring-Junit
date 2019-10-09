@@ -1,23 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.sakha</groupId>
+	<groupId>com.sakha.unitest</groupId>
 	<artifactId>unittest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
+	<packaging>jar</packaging>
+	<name>unittest</name>
+	<url>http://maven.apache.org</url>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.21.RELEASE</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<version>1.4.2.RELEASE</version>
 	</parent>
 
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
 
-		<dependencies>
+	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -39,27 +41,25 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>com.google.api-client</groupId>
-			<artifactId>google-api-client</artifactId>
-			<version>1.23.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.oauth-client</groupId>
-			<artifactId>google-oauth-client-jetty</artifactId>
-			<version>1.23.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.apis</groupId>
-			<artifactId>google-api-services-sheets</artifactId>
-			<version>v4-rev493-1.23.0</version>
-		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.modelmapper/modelmapper -->
 		<dependency>
 			<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>
 			<version>0.7.5</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-module-junit4</artifactId>
+			<version>1.6.4</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-api-mockito</artifactId>
+			<version>1.6.4</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
@@ -90,7 +90,7 @@
 					<componentProperties>
 						<revengfile>drc/main/resources/reveng.xml</revengfile>
 						<propertyfile>src/main/resources/hibernate.properties</propertyfile>
-						<packagename>com.rmf.model</packagename>
+						<packagename>com.sakha.model</packagename>
 						<jdk5>true</jdk5>
 						<ejb3>true</ejb3>
 					</componentProperties>
@@ -115,5 +115,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

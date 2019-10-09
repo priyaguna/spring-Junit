@@ -20,7 +20,7 @@ import com.sakha.unittest.service.UserService;
 @RequestMapping("/user")
 public class UserController {
 
-	private static final String GET_USER = "/user";
+	private static final String GET_USER = "/getUser";
 
 	@Autowired
 	UserService userService;
@@ -30,7 +30,7 @@ public class UserController {
 			@RequestParam("userId") Integer userId) {
 		UserDTO userDto = null;
 		try {
-			userDto =  userService.getUser(userId);
+			userDto = userService.getUser(userId);
 		} catch (Exception e) {
 			ErrorDTO errorJson = new ErrorDTO();
 			errorJson.setErrorMessage(e.getMessage());
@@ -38,14 +38,13 @@ public class UserController {
 		}
 		return userDto;
 	}
-	
-	@ExceptionHandler(Exception.class)
-	public ResponseEntity<ErrorDTO> exceptionHandeler(HttpServletRequest req, Exception exception) {
-
-		ErrorDTO errorJson = new ErrorDTO();
-		errorJson.setErrorMessage(exception.getMessage());
-
-		return new ResponseEntity<ErrorDTO>(errorJson, HttpStatus.INTERNAL_SERVER_ERROR);
-	}
+//	@ExceptionHandler(Exception.class)
+//	public ResponseEntity<ErrorDTO> exceptionHandeler(HttpServletRequest req, Exception exception) {
+//
+//		ErrorDTO errorJson = new ErrorDTO();
+//		errorJson.setErrorMessage(exception.getMessage());
+//
+//		return new ResponseEntity<ErrorDTO>(errorJson, HttpStatus.INTERNAL_SERVER_ERROR);
+//	}
 
 }

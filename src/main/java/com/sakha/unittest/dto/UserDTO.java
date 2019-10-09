@@ -30,4 +30,11 @@ public class UserDTO {
 		this.mobile = mobile;
 	}
 
+	@Override
+	public String toString() {
+		return "UserDTO [id=" + id + ", name=" + name + ", mobile=" + mobile + "]";
+	}
+	
+	
+
 }

@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.sakha.mapper.user.UserMapper;
-import com.sakha.model.UserEntity;
 import com.sakha.unittest.dto.UserDTO;
+import com.sakha.unittest.model.UserEntity;
 import com.sakha.unittest.repository.UserRepository;
 import com.sakha.unittest.service.UserService;
 
@@ -23,9 +23,6 @@ public class UserServiceImpl implements UserService {
 
 		UserDTO userDTO = UserMapper.entityToDto(userEntity);
 		return userDTO;
-		/*userDTO.setId(1);
-		userDTO.setName("bhavana");
-		return userDTO;*/
 	}
 
 }
